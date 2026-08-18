@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Imo Enterprise Operations Portal
+    </title>
+
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         PAGE
+    ====================================================== -->
+
+    <div class="portal-page">
+
+
+        <!-- =================================================
+             TOP AREA
+        ================================================== -->
+
+        <section class="portal-hero">
+
+
+            <!-- TOP INFO -->
+            
+            <div class="hero-topbar">
+
+
+                <div class="date-card">
+
+                    <div class="date-row">
+
+                        <span class="material-icons">
+                            calendar_month
+                        </span>
+
+                        <div>
+                            <strong id="currentDate">
+                                --
+                            </strong>
+
+                            <small id="currentDay">
+                                --
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="date-divider"></div>
+
+
+                    <div class="date-row">
+
+                        <span class="material-icons">
+                            schedule
+                        </span>
+
+                        <div>
+                            <strong id="currentTime">
+                                --
+                            </strong>
+
+                            <small>
+                                Local Time
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- COMPANY BRAND -->
+
+                <div class="hero-brand">
+
+                    <img
+                        src="assets/Logo.png"
+                        alt="Imo Chicken & Agro Logo"
+                        class="hero-logo"
+                    >
+
+                    <h1>
+                        Enterprise Operations Portal
+                    </h1>
+
+                    <div class="hero-accent"></div>
+
+                    <p>
+                        One Company. One System. One Goal.
+                    </p>
+
+                </div>
+
+
+
+                <!-- STATUS -->
+
+                <div class="system-status-card">
+
+                    <div class="status-heading">
+
+                        <span class="material-icons">
+                            monitoring
+                        </span>
+
+                        <div>
+                            <strong>
+                                All Systems
+                            </strong>
+
+                            <small>
+                                Centralized Access
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="status-divider"></div>
+
+
+                    <div class="department-count">
+
+                        <strong>
+                            15
+                        </strong>
+
+                        <span>
+                            Departments & Systems
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- INTRO -->
+
+            <div class="hero-intro">
+
+                <p>
+                    Centralized access to departmental systems of
+                    <strong>
+                        Imo Chicken & Agro (Pvt) Ltd.
+                    </strong>
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             DEPARTMENTS
+        ================================================== -->
+
+        <main class="departments-section">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        ENTERPRISE ACCESS
+                    </span>
+
+                    <h2>
+                        Departments & Systems
+                    </h2>
+
+                    <p>
+                        Select a department to access its operational system.
+                    </p>
+
+                </div>
+
+
+                <div class="department-total">
+
+                    <span class="material-icons">
+                        apps
+                    </span>
+
+                    <span>
+                        15 Modules
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARDS GENERATED BY JS -->
+
+            <div
+                id="departmentGrid"
+                class="department-grid"
+            >
+            </div>
+
+
+        </main>
+
+
+
+        <!-- =================================================
+             FEATURES
+        ================================================== -->
+
+        <section class="portal-features">
+
+
+            <div class="feature-item">
+
+                <div class="feature-icon">
+                    <span class="material-icons">
+                        language
+                    </span>
+                </div>
+
+                <div>
+                    <strong>
+                        Centralized Access
+                    </strong>
+
+                    <p>
+                        All departmental systems in one portal.
+                    </p>
+                </div>
+
+            </div>
+
+
+
+            <div class="feature-item">
+
+                <div class="feature-icon">
+                    <span class="material-icons">
+                        insights
+                    </span>
+                </div>
+
+                <div>
+                    <strong>
+                        Real-Time Insights
+                    </strong>
+
+                    <p>
+                        Operational information for better decisions.
+                    </p>
+                </div>
+
+            </div>
+
+
+
+            <div class="feature-item">
+
+                <div class="feature-icon">
+                    <span class="material-icons">
+                        shield
+                    </span>
+                </div>
+
+                <div>
+                    <strong>
+                        Secure & Reliable
+                    </strong>
+
+                    <p>
+                        Controlled access to company systems.
+                    </p>
+                </div>
+
+            </div>
+
+
+
+            <div class="feature-item">
+
+                <div class="feature-icon">
+                    <span class="material-icons">
+                        description
+                    </span>
+                </div>
+
+                <div>
+                    <strong>
+                        Smart Reports
+                    </strong>
+
+                    <p>
+                        Department reporting and analytics.
+                    </p>
+                </div>
+
+            </div>
+
+
+
+            <div class="feature-item">
+
+                <div class="feature-icon">
+                    <span class="material-icons">
+                        devices
+                    </span>
+                </div>
+
+                <div>
+                    <strong>
+                        Easy Access
+                    </strong>
+
+                    <p>
+                        Designed for desktop and mobile devices.
+                    </p>
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer class="portal-footer">
+
+            <div>
+                © 2026 Imo Chicken & Agro (Pvt) Ltd.
+                <span>|</span>
+                All Rights Reserved
+            </div>
+
+
+            <div>
+                Powered by
+                <strong>
+                    MIS Department
+                </strong>
+            </div>
+
+
+            <div>
+                Enterprise Portal v1.0
+            </div>
+
+        </footer>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         COMING SOON MODAL
+    ====================================================== -->
+
+    <div
+        id="comingSoonModal"
+        class="modal"
+    >
+
+        <div class="modal-card">
+
+
+            <div class="modal-icon">
+
+                <span class="material-icons">
+                    construction
+                </span>
+
+            </div>
+
+
+            <span class="modal-badge">
+                COMING SOON
+            </span>
+
+
+            <h2 id="comingSoonTitle">
+                Department System
+            </h2>
+
+
+            <p>
+                This department system is currently under development
+                and will be available through the Enterprise Operations
+                Portal soon.
+            </p>
+
+
+            <button
+                id="closeComingSoon"
+                type="button"
+                class="modal-close-btn"
+            >
+                Close
+            </button>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         SCRIPT
+    ====================================================== -->
+
+    <script src="js/app.js"></script>
+
+
+</body>
+
+</html>
