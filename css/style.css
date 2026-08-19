@@ -1236,3 +1236,278 @@ body {
 .portal-hero.collapsed {
     min-height: 58px;
 }
+/* =========================================================
+   ACTIVE / DISABLED DEPARTMENT STATUS
+========================================================= */
+
+/* READY SYSTEM */
+.department-card.system-active {
+    opacity: 1;
+}
+
+
+/* SYSTEM NOT AVAILABLE YET */
+.department-card.system-disabled {
+    --card-color: #94a3b8 !important;
+    --soft-color: #f1f5f9 !important;
+
+    background: #f8fafc;
+
+    border-color: #e2e8f0;
+
+    box-shadow:
+        0 4px 14px rgba(15, 23, 42, 0.035);
+}
+
+
+/* ICON GRAY */
+.department-card.system-disabled
+.department-icon {
+    background: #eef2f6;
+
+    color: #94a3b8;
+}
+
+
+/* NUMBER BADGE GRAY */
+.department-card.system-disabled
+.department-number {
+    background: #94a3b8;
+}
+
+
+/* TITLE SLIGHTLY MUTED */
+.department-card.system-disabled h3 {
+    color: #64748b;
+}
+
+
+/* DESCRIPTION MUTED */
+.department-card.system-disabled p {
+    color: #94a3b8;
+}
+
+
+/* BUTTON GRAY */
+.department-card.system-disabled
+.department-open-btn {
+    border-color: #cbd5e1;
+
+    color: #94a3b8;
+
+    background: transparent;
+}
+
+
+/* DON'T TURN COLORED ON HOVER */
+.department-card.system-disabled:hover {
+    transform: translateY(-2px);
+
+    border-color: #cbd5e1;
+
+    box-shadow:
+        0 7px 18px rgba(15, 23, 42, 0.05);
+}
+
+
+.department-card.system-disabled:hover
+.department-open-btn {
+    background: #e2e8f0;
+
+    color: #64748b;
+}
+
+
+/* ACTIVE CARD KEEPS NORMAL COLOUR */
+.department-card.system-active:hover {
+    border-color: var(--card-color);
+}
+/* =========================================================
+   IMO BUILDING ENTRANCE
+========================================================= */
+
+.building-intro {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    z-index: 9999;
+
+    overflow: hidden;
+
+    background: #071a31;
+
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s ease;
+}
+
+.building-bg {
+    position: absolute;
+    inset: 0;
+
+    background:
+        url("../assets/imo-building.png")
+        center center / cover no-repeat;
+
+    transform: scale(1);
+
+    transition:
+        transform 3.2s cubic-bezier(.2,.75,.25,1),
+        filter 2.4s ease;
+}
+
+.building-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(3, 15, 32, 0.62) 0%,
+            rgba(3, 15, 32, 0.18) 42%,
+            rgba(3, 15, 32, 0.03) 70%
+        );
+}
+
+.entrance-content {
+    position: absolute;
+
+    /* LEFT SIDE CENTER */
+    left: 6%;
+    top: 50%;
+    bottom: auto;
+
+    transform: translateY(-50%);
+
+    width: min(520px, 42%);
+
+    text-align: left;
+
+    color: #ffffff;
+
+    z-index: 3;
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.entrance-label {
+    margin-bottom: 10px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #efd300;
+}
+
+.entrance-content h1 {
+    margin: 0;
+
+    font-size: clamp(32px, 4vw, 55px);
+    font-weight: 800;
+
+    line-height: 1.05;
+}
+
+.entrance-content p {
+    margin: 14px 0 24px;
+
+    font-size: 17px;
+
+    color: rgba(255,255,255,0.82);
+}
+
+.enter-portal-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 14px 24px;
+
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 12px;
+
+    background: rgba(28, 131, 241, 0.941);
+
+    color: black;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,0.22);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+.enter-portal-btn:hover {
+    transform: translateY(-2px);
+
+    background: #40b2f0;
+}
+
+.skip-intro-btn {
+    position: absolute;
+
+    top: 25px;
+    right: 30px;
+
+    z-index: 4;
+
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 8px;
+
+    padding: 8px 14px;
+
+    background: rgba(5,20,40,0.35);
+
+    color: rgba(255,255,255,0.85);
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* ENTERING BUILDING */
+
+.building-intro.entering .building-bg {
+    transform: scale(2.15);
+
+    filter: brightness(1.25);
+}
+
+.building-intro.entering .entrance-content {
+    opacity: 0;
+
+    transform:
+        translateY(-50%)
+        translateX(-30px);
+}
+
+.building-intro.entering .skip-intro-btn {
+    opacity: 0;
+}
+
+
+/* REMOVE INTRO */
+
+.building-intro.finished {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}

@@ -350,8 +350,14 @@ function renderDepartments() {
                 );
 
 
+            const hasLink =
+                department.link &&
+                department.link.trim() !== "";
+
             card.className =
-                "department-card";
+                hasLink
+                    ? "department-card system-active"
+                    : "department-card system-disabled";
 
 
             card.style.setProperty(
@@ -706,3 +712,67 @@ function initializeHeroToggle() {
     });
 
 }
+/* =========================================================
+   BUILDING ENTRANCE ANIMATION
+========================================================= */
+
+function initializeBuildingIntro() {
+
+    const intro =
+        document.getElementById("buildingIntro");
+
+    const enterBtn =
+        document.getElementById("enterPortalBtn");
+
+    const skipBtn =
+        document.getElementById("skipIntroBtn");
+
+
+    if (!intro || !enterBtn) {
+        return;
+    }
+
+
+    function enterBuilding() {
+
+        intro.classList.add("entering");
+
+        setTimeout(() => {
+
+            intro.classList.add("finished");
+
+            document.body.style.overflow = "";
+
+        }, 2800);
+
+    }
+
+
+    function skipIntro() {
+
+        intro.classList.add("finished");
+
+        document.body.style.overflow = "";
+
+    }
+
+
+    document.body.style.overflow = "hidden";
+
+    enterBtn.addEventListener(
+        "click",
+        enterBuilding
+    );
+
+    skipBtn?.addEventListener(
+        "click",
+        skipIntro
+    );
+
+}
+
+
+document.addEventListener(
+    "DOMContentLoaded",
+    initializeBuildingIntro
+);
