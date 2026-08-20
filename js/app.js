@@ -144,7 +144,7 @@ const departments = [
 
         softColor: "#EAF3FF",
 
-        link: "https://salesdepartmentv2-t4bxoknwkuvvuvgu8uttun.streamlit.app/"
+        link: "https://sales-app-department-ugbzrddjm89baxklewhdsj.streamlit.app/"
     },
 
 
