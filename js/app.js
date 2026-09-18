@@ -144,7 +144,7 @@ const departments = [
 
         softColor: "#EAF3FF",
 
-        link: "https://sales-app-department-ugbzrddjm89baxklewhdsj.streamlit.app/"
+        link: "https://next-app-ebon-zeta.vercel.app/login/"
     },
 
 
