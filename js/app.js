@@ -126,7 +126,7 @@ const departments = [
 
         softColor: "#FFF0F3",
 
-        link: "https://script.google.com/macros/s/AKfycbzRzcq9vVUXvIgZGxP77kL3TQh3EUGOCFMrkPk-jXkSqM9tygvw1b9iXOQJp4m228frKQ/exec"
+        link: "https://script.google.com/macros/s/AKfycbwueXPF4tMKbS3W76Q8t2jQXBGjLwy4Pi7mF8d7WxgSHtyttlG7duO0l9HjZOAdQvx7pg/exec"
     },
 
 
