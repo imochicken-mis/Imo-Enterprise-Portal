@@ -126,7 +126,7 @@ const departments = [
 
         softColor: "#FFF0F3",
 
-        link: "https://script.google.com/macros/s/AKfycbwueXPF4tMKbS3W76Q8t2jQXBGjLwy4Pi7mF8d7WxgSHtyttlG7duO0l9HjZOAdQvx7pg/exec"
+        link: "https://script.google.com/macros/s/AKfycbzRzcq9vVUXvIgZGxP77kL3TQh3EUGOCFMrkPk-jXkSqM9tygvw1b9iXOQJp4m228frKQ/exec"
     },
 
 
@@ -289,6 +289,24 @@ const departments = [
         softColor: "#FDEDEF",
 
         link: ""
+    },
+
+
+    {
+        number: "16",
+
+        name: "Procurement Department",
+
+        icon: "local_shipping",
+
+        description:
+            "Purchasing, supplier management, quotations and purchase orders.",
+
+        color: "#0E7C9B",
+
+        softColor: "#E6F5F9",
+
+        link: "https://procurement-app-liard.vercel.app/login"
     }
 
 ];
