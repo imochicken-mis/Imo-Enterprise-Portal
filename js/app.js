@@ -108,7 +108,7 @@ const departments = [
 
         softColor: "#E8F8F6",
 
-        link: ""
+        link: "https://imochicken-mis.github.io/Quality-Department/"
     },
 
 
