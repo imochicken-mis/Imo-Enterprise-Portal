@@ -53,7 +53,7 @@ const departments = [
 
         softColor: "#FFF3E7",
 
-        link: ""
+        link: "https://buy-back-app-omega.vercel.app/login"
     },
 
 
