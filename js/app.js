@@ -180,7 +180,7 @@ const departments = [
 
         softColor: "#EFF8EA",
 
-        link: ""
+        link: "https://app.powerbi.com/view?r=eyJrIjoiN2YyZWQ5Y2EtNzRjZC00ZTk3LTkwY2MtM2UyNmJlYzc5YjY3IiwidCI6IjIwMGJkNDMwLWY5ZWEtNGY0OS1iOWIzLWI5ZTg2YzRhYTk1MCIsImMiOjEwfQ%3D%3D"
     },
 
 
@@ -216,7 +216,7 @@ const departments = [
 
         softColor: "#F0EDFC",
 
-        link: ""
+        link: "https://script.google.com/macros/s/AKfycbzGGS4YBawFnQzbfkqzahwt2Bs_SLjqKbJqNUZpPheX63kFt3RX7N8AwlAkPWDKtoNO/exec"
     },
 
 
@@ -307,6 +307,42 @@ const departments = [
         softColor: "#E6F5F9",
 
         link: "https://procurement-app-liard.vercel.app/login"
+    },
+
+
+    {
+        number: "17",
+
+        name: "Transport Department",
+
+        icon: "commute",
+
+        description:
+            "Vehicle fleet, deliveries, trip scheduling and transport costs.",
+
+        color: "#D9730D",
+
+        softColor: "#FFF2E5",
+
+        link: "https://imochicken-mis.github.io/Transport-Dep/"
+    },
+
+
+    {
+        number: "18",
+
+        name: "Automobile Department",
+
+        icon: "directions_car",
+
+        description:
+            "Vehicle maintenance, repairs, spare parts and service records.",
+
+        color: "#4B5BD6",
+
+        softColor: "#EDEFFD",
+
+        link: ""
     }
 
 ];
@@ -359,8 +395,23 @@ function renderDepartments() {
     grid.innerHTML = "";
 
 
-    departments.forEach(
-        (department) => {
+    // LINK THIYENA SYSTEM PALAWENIYATA
+    const hasSystemLink =
+        (department) =>
+            Boolean(department.link?.trim());
+
+    const orderedDepartments =
+        [...departments].sort(
+            (a, b) =>
+                hasSystemLink(b) - hasSystemLink(a)
+        );
+
+
+    orderedDepartments.forEach(
+        (department, index) => {
+
+            const displayNumber =
+                String(index + 1).padStart(2, "0");
 
             const card =
                 document.createElement(
@@ -393,7 +444,7 @@ function renderDepartments() {
             card.innerHTML = `
 
                 <div class="department-number">
-                    ${department.number}
+                    ${displayNumber}
                 </div>
 
                 ${department.link && department.link.trim() !== ""
