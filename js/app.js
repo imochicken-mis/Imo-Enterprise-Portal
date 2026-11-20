@@ -363,8 +363,6 @@ document.addEventListener(
 
         initializeComingSoonModal();
 
-        initializeTopTab();
-
         updateDateTime();
 
         setInterval(
@@ -590,37 +588,6 @@ function showComingSoon(
 
 
 /* =========================================================
-   TOP TAB (KPI DASHBOARD)
-========================================================= */
-
-function initializeTopTab() {
-
-    const tab =
-        document.getElementById(
-            "kpiTabBtn"
-        );
-
-
-    if (!tab) {
-        return;
-    }
-
-
-    tab.addEventListener(
-        "click",
-        () => {
-
-            window.location.href =
-                "kpi.html";
-
-        }
-    );
-
-}
-
-
-
-/* =========================================================
    MODAL EVENTS
 ========================================================= */
 
@@ -831,15 +798,6 @@ function initializeBuildingIntro() {
 
 
     if (!intro || !enterBtn) {
-        return;
-    }
-
-
-    // BACK FROM OTHER PAGES (index.html#portal) - INTRO EKA SKIP
-    if (window.location.hash === "#portal") {
-
-        intro.classList.add("finished");
-
         return;
     }
 
