@@ -216,7 +216,7 @@ const departments = [
 
         softColor: "#F0EDFC",
 
-        link: "https://script.google.com/macros/s/AKfycbzGGS4YBawFnQzbfkqzahwt2Bs_SLjqKbJqNUZpPheX63kFt3RX7N8AwlAkPWDKtoNO/exec"
+        link: "https://imochicken-mis.github.io/ERP-department/"
     },
 
 
@@ -362,6 +362,8 @@ document.addEventListener(
         renderDepartments();
 
         initializeComingSoonModal();
+
+        initializeTopTab();
 
         updateDateTime();
 
@@ -588,6 +590,37 @@ function showComingSoon(
 
 
 /* =========================================================
+   TOP TAB (KPI DASHBOARD)
+========================================================= */
+
+function initializeTopTab() {
+
+    const tab =
+        document.getElementById(
+            "kpiTabBtn"
+        );
+
+
+    if (!tab) {
+        return;
+    }
+
+
+    tab.addEventListener(
+        "click",
+        () => {
+
+            window.location.href =
+                "kpi.html";
+
+        }
+    );
+
+}
+
+
+
+/* =========================================================
    MODAL EVENTS
 ========================================================= */
 
@@ -798,6 +831,15 @@ function initializeBuildingIntro() {
 
 
     if (!intro || !enterBtn) {
+        return;
+    }
+
+
+    // BACK FROM OTHER PAGES (index.html#portal) - INTRO EKA SKIP
+    if (window.location.hash === "#portal") {
+
+        intro.classList.add("finished");
+
         return;
     }
 
